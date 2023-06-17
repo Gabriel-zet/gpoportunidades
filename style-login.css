@@ -1,0 +1,212 @@
+@font-face {
+    font-family: Poppins Medium;
+    src: url('fonts/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: Poppins bold;
+    src: url('fonts/Poppins-Bold.ttf') format(truetype);
+}
+@font-face {
+    font-family: Poppins light;
+    src: url('fonts/Poppins-Light.ttf') format(truetype);
+}
+
+
+/* Arrumar o font face */
+
+
+  html {
+    height: 100%;
+  }
+  body {
+    background: linear-gradient(#3103af, #0b001d);
+  }
+
+  h2{
+    font-family: Poppins bold;
+  }
+
+
+
+  @keyframes mover {
+    0% { 
+      left: 0; 
+    } /* posição inicial */
+    50% { 
+      left: calc(100% - 110px); 
+    } /* posição intermediária */
+    100% { 
+      left: 0; 
+    } /* posição final */
+  }
+
+  .barra {
+    width: 100px;
+    height: 2px;
+    background-color: #4d26b7;
+    position: relative;
+    animation: mover 2s linear infinite; /* define a animação */
+  }
+  
+  .login-box {
+    width: 400px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    background: rgba(0,0,0,.5);
+    font-family: Poppins light;
+ 
+  }
+  
+  .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fcf7f7;
+    border: none;
+    border-bottom: 1px solid #4d26b7;
+    outline: none;
+    background: transparent;
+    margin-bottom: 30px;
+
+  }
+
+
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #4d26b7;
+    font-size: 12px; 
+  }
+  
+input[type="checkbox"] {
+  display: none;
+}
+
+label[for="remember"] {
+  color: #fdfdfd;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: Poppins medium;
+}
+
+label[for="remember"]:before {
+  line-height: 18px;
+  text-align: center;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ccc;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label:before {
+  content: "\2713";
+  display: inline-block;
+  vertical-align: top;
+  color: #fff;
+  background-color: #4d26b7;
+  border-color: #007bff;
+}
+
+
+.anim-btn {
+  margin-top: 10%;
+  position: relative;
+  z-index: 1;
+  padding: 10px 125px;
+  background-color: #4d26b7;
+  color: white;
+  border-radius: 5px ;
+  border: none;
+  letter-spacing: 0.2em;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 0 5px #4d26b7,
+  0 0 25px #4d26b7;
+}
+
+
+
+.anim-btn:hover {
+  background: #4d26b7;
+  color: #fdfdfd;
+  border-radius: 5px;
+  box-shadow: none;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .btn-final {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    font-family: Poppins light; 
+    font-size: 16px;
+  }
+
+  .btn-fim{
+    margin: 5px;
+  }
+
+  .box-form-responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+.error-message {
+  justify-content: center;
+  margin-top: 10px;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.imgP {
+    width: 20%;
+    height: 200px;
+}
+
+select {
+  background: #2A2A2A;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 8px;
+  color: white;
+  font-family: 'Poppins light';
+}
